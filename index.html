@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de CEP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Consulta de CEP</h1>
+    <p>Digite um CEP para consultar o endereço.</p>
+    <form id="formulario" novalidate>
+      <label for="cep">CEP</label>
+      <input id="cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" required>
+      <button id="buscar" type="submit">Buscar endereço</button>
+    </form>
+    <p id="mensagem" role="status" aria-live="polite"></p>
+    <section id="resultado" hidden aria-label="Endereço encontrado">
+      <h2>Endereço</h2>
+      <dl>
+        <dt>Rua</dt><dd id="rua"></dd>
+        <dt>Bairro</dt><dd id="bairro"></dd>
+        <dt>Cidade</dt><dd id="cidade"></dd>
+        <dt>Estado</dt><dd id="estado"></dd>
+      </dl>
+    </section>
+  </main>
+</body>
+</html>
